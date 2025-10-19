@@ -1,6 +1,7 @@
 {
     "java.project.sourcePaths": [
-        "first"
+        "first",
+        "CRUD_Operations"
     ],
     "java.project.referencedLibraries": [
         "MYSQL DRIVER\\mysql-connector-j-9.4.0.jar"
