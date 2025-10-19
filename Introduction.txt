@@ -1,0 +1,88 @@
+🔴 JDBC (Java database Connectivity) : 
+
+    JDBC is a java API that is used to connect or intersect with the DataBases. (JDBC DRIVERS KA USE KRKE CONNECT KR SAKTE HAI)
+    JDBC Drivers are software components that provides the necessary functonality to connect with the java applications.
+
+    TYPES OF DRIVERS :
+
+        i . JDBC ODBC bridge driver : 
+
+            - Ye ek Old / Outdated driver hai 
+            - c programming se banaya gya hai 
+            - performence wise bekar hai
+            - scaleablity issues hai. 
+
+        ii. Native API : 
+        
+            - Jis database ka API use kr rhe hai wahi data base use krna padta hai (mysql ke api ko mysql database, postgreySQL, Oracle ,etc)
+            - Vender specific hai. 
+
+        iii. Native Protocol Pure Java Driver : 
+
+            - Better > JDBC ODBC AND NATIVE API 
+            - java language se banaya hua hai.
+            - ye Client aur Database ke beech mai Middleware (Layer) banata hai aur dono ko connect krta hai. 
+
+        iv. Thin Driver : 
+
+            - Ye Directly Native API calls ko convert karta hai Database calls ke andar 
+            - No Middleware
+            - No scaleablity issues 
+            - Better than all of above Drivers 
+
+     -----------------------------------------------------------------------------------------------------------------------------------------
+
+🔴 JDBC COMPONENTS : 
+
+    1. DriverManager Class   (Class)
+    2. Connection Interface  (Interface)
+    3. Statement and Prepared Statement Interface (Interface)
+    4. ResultSet Interface  ( Interface )
+
+    - Connection Interface , Statement , ResultSet ye teeno Interface hai jo DriverManager Class mai use honge 
+
+    1. DRIVERMANAGER CLASS  : 
+
+        - Iske pass ek method hai (.getConnection()) jo database ke saath connect krne mai kaam aaega
+
+        - ye jo connection aapne banaya hai toh aapko isko kisi instance mai store krna hota hai 
+          taaki baadme usko use krke data base pe kaam kr sake toh uske liye hum connection interface instance use krte hai 
+
+        - SQL Queries ko run krne ke liye hume Statement chahiye hota hai. Ye 2 type ke hote hai Statement aur Prepared Statement ! 
+            PRO --> Prepared Statement
+            NOOB --> Statement 
+
+        - SQL mai ResultSet ka matlb hai output mai aane wala table
+          aur java mai uska matlb hota hai Jo table database se aarhi hogi uska ek interface bnega aur vo instance uss table ko hold krega 
+          matlb uss table mai suppose 10 students ki info hai toh uspe hum instance se kaam kr sakte hai. 
+
+    🔴  PROGRAM FLOW : 
+
+        1. Aap jo bhi Sql software use kr rhe ho uska connector(.jar) download krke connect krdo java se 
+
+        2. important Drivers ko load kro : 
+
+            - try { Class.forName("com.mysql.cj.jdbc.Driver"); 
+              } 
+              catch (ClassNotFoundExceptpion e){
+                System.out.print(e.getMessage())
+                };
+                
+        - Bs iss case mai hi ClassNotFoundExceptpion aaega 
+        - Iske aage connection vagera mai sird SQLExcepetion aaega. 
+
+        - iske baad usraname url password variable banake url password username database se assign krdo 
+        - vo saare private static final ho aur main method se bahar bhi . 
+
+        3. Connection banana : 
+
+            - 
+
+
+
+
+
+
+
+
+
